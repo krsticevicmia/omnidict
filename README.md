@@ -1,0 +1,2 @@
+# omnidict
+psi projekat
