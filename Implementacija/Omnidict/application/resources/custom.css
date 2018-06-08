@@ -25,3 +25,18 @@ div.footer{
     width: 100%;
     text-align: center;
 }
+
+table#tableDisplay {
+    border: 1px solid black;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+td#cellDisplay{
+    border: 1px solid black;
+}
+
+th#headerDisplay{
+    height: 50px; 
+    background-color: lightgray;
+}

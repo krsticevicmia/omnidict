@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Stefan
+ * @author Stefan Boskovic 2014/0659
  */
 
 /**
@@ -22,6 +22,9 @@ function call($controller, $action){
         case 'professor':
             $controller = new ProfessorController();
             break;
+        case 'student':
+              $controller = new StudentController();
+              break;
         default:
             $controller = new HomeController();
             break;
@@ -32,7 +35,10 @@ function call($controller, $action){
 
 // Niz imena svih kontrolera, i za svaki kontroler niz metoda
 // VAZNO!!! Ne zaboravi da dodas novi kontroler i / ili nove funkcije i ovdje
-$controllers = array('home' => ['index', 'login', 'greska', 'logout'], 'professor' => ['index']);
+$controllers = array('home' => ['index', 'login', 'error', 'logout', 'register', 'insertLanguage','insertWordTypeFrontendTable',
+    'formAction'],
+                        'professor' => ['index','edit'], 
+                        'student'=> ['index','edit'] );
 
 /**
  * Na osnovu postavljenjih vrijednosti promjenljivih $controller
@@ -43,10 +49,9 @@ if (array_key_exists($controller, $controllers)){
         call($controller, $action);
     }
     else{
-        call('home', 'greska');
+        call('home', 'error');
     }
 }
 else{
-    call('home', 'greska');
+    call('home', 'error');
 }
-?>

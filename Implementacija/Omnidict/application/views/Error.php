@@ -2,7 +2,7 @@
     /**
      * Stranica za ispis greske
      * 
-     * @author Stefan
+     * @author Stefan Boskovic 2014/0659
      */
     echo "Greska!";
 ?>

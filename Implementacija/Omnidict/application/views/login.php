@@ -1,6 +1,6 @@
 <?php
     /**
-     * @author Stefan
+     * @author Stefan Boskovic 2014/0659
      *
      */
 ?>
@@ -17,5 +17,8 @@
     <td style="text-align: left; width:30%">
         <br/>
         <input type="submit" value="Prijavite se"/>
+         <br><font color = 'red'><?php if (isset($_SESSION['login_error_msg']))echo($_SESSION['login_error_msg']);
+                $_SESSION['login_error_msg']='';?></font>
+
     </td>
 </form>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     /**
-     * @author Stefan
+     * @author Stefan Boskovic 2014/0659
      *
      */
 ?>
@@ -11,9 +11,10 @@
 	<title>Omnidict</title>
         <!- application/resources/custom.css -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/application/resources/custom.css"/>
+        <script src="<?php echo base_url(); ?>/application/resources/ajax_loaders.js" ></script>
 </head>
 
-<body>
+<body onload="loadTable(); getWordType();">
     <div class="navbar">
         <table style="width : 100%">
             <tr>                
@@ -21,7 +22,6 @@
                     <h2>Omnidict</h2>
                 </td>
                 <?php
-                    // TODO: routes za zaglavlje - login ili korisnicko ime
                     require_once 'application/routes_header.php';
                 ?>
             </tr>
@@ -29,7 +29,6 @@
     </div>
     <div class="body">
         <?php
-            // TODO: routes za body
             require_once 'application/routes_content.php';
         ?>
     </div>
